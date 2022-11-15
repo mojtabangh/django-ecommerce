@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local apps
     'shop.apps.ShopConfig',
+    # Third-Party apps
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
