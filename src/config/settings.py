@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local apps
     'shop.apps.ShopConfig',
+    'cart.apps.CartConfig',
     # Third-Party apps
     'ckeditor',
 ]
@@ -144,3 +145,5 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
     },
 }
+
+CART_SESSION_ID = 'cart'
