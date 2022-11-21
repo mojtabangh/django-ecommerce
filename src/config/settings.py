@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # Local apps
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig',
     # Third-Party apps
     'ckeditor',
 ]
