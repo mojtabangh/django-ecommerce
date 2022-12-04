@@ -149,3 +149,6 @@ CKEDITOR_CONFIGS = {
 }
 
 CART_SESSION_ID = 'cart'
+
+# E-mail config
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
