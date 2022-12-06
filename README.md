@@ -22,3 +22,6 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
+## Links
+- [Linkedin](https://www.linkedin.com/in/mojtabangh/)
+- [Telegram](https://t.me/Mojtaba_Naghavi)
