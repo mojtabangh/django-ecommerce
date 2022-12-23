@@ -40,3 +40,9 @@ def payment_process(request):
                 {'order': order,
                 'client_token': client_token}
             )
+
+def payment_done(request):
+    return render(request, 'payment/done.html')
+
+def payment_canceled(request):
+    return render(request, 'payment/canceled.html')
