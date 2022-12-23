@@ -14,7 +14,7 @@ class OrderItemInline(admin.TabularInline):
 
 def export_to_csv(modeladmin, request, queryset):
     opts = modeladmin.model._meta
-    content_disposition = 'attachment; filename={opts.verbose_name}.csv'
+    content_disposition = f'attachment; filename={opts.verbose_name}.csv'
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = content_disposition
     writer = csv.writer(response)
@@ -22,7 +22,7 @@ def export_to_csv(modeladmin, request, queryset):
     fields = [field for field in opts.get_fields() if not \
         field.many_to_many and not field.one_to_many]
     # Write a first row with header information
-    writer.writerow([field.verbos_name for field in fields])
+    writer.writerow([field.verbose_name for field in fields])
     # write data rows
     for obj in queryset:
         data_row = []
