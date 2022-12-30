@@ -5,17 +5,21 @@
 Django-ecommerce is an open source e-commerce platform built with Django and Celery.
 
 ## Project Setup
-**Clone repository and install required packages:**
+**Clone repository**
 ```sh
-https://github.com/mojtabangh/django-ecommerce.git
-pip install -r requirements.txt
+git clone https://github.com/mojtabangh/django-ecommerce.git
 ```
 **Setup virtualenv**
 ```sh
+pip install virtualenv
 virtualenv env
 source env/bin/activate
 ```
-**Migrate and Start Server**
+**install required packages**
+```
+pip install -r requirements.txt
+```
+**Migrate and Run Server**
 Go to the **src** directory and run the following commands:
 ```sh
 python manage.py makemigrations
