@@ -15,11 +15,11 @@ pip install virtualenv
 virtualenv env
 source env/bin/activate
 ```
-**install required packages**
-```
+**Install required packages**
+```sh
 pip install -r requirements.txt
 ```
-**Migrate and Run Server**
+**Migrate and run server**
 Go to the **src** directory and run the following commands:
 ```sh
 python manage.py makemigrations
