@@ -20,6 +20,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 **Migrate and run server**
+
 Go to the **src** directory and run the following commands:
 ```sh
 python manage.py makemigrations
