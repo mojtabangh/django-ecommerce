@@ -17,11 +17,11 @@ ALLOWED_HOSTS = []
 
 # Application definition
 LOCAL_APPS = [
-    'shop.apps.ShopConfig',
-    'cart.apps.CartConfig',
-    'orders.apps.OrdersConfig',
-    'payment.apps.PaymentConfig',
-    'coupons.apps.CouponsConfig',
+    'ecommerce.shop.apps.ShopConfig',
+    'ecommerce.cart.apps.CartConfig',
+    'ecommerce.orders.apps.OrdersConfig',
+    'ecommerce.payment.apps.PaymentConfig',
+    'ecommerce.coupons.apps.CouponsConfig',
 ]
     
 THIRD_PARTY_APPS = [

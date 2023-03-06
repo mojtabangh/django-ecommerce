@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import View, DetailView
 
-from shop.models import Product, Category
-from cart.forms import CartAddProductForm
+from .models import Product, Category
+from ecommerce.cart.forms import CartAddProductForm
 
 class ProductListView(View):
     def get(self, request, *args, **kwargs):

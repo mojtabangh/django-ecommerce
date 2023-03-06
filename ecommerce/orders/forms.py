@@ -1,5 +1,5 @@
 from django import forms
-from orders.models import Order, OrderItem
+from .models import Order, OrderItem
 
 class OrderCreateForm(forms.ModelForm):
     class Meta:

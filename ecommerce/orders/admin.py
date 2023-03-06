@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.utils.safestring import mark_safe
 from django.http import HttpResponse
 from django.contrib import admin
-from orders.models import Order, OrderItem
+from ecommerce.orders.models import Order, OrderItem
 
 # Register your models here.
 

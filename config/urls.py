@@ -21,11 +21,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cart/', include('cart.urls', namespace='cart')),
-    path('payment/', include('payment.urls', namespace='payment')),
-    path('orders/', include('orders.urls', namespace='orders')),
-    path('coupons/', include('coupons.urls', namespace='coupons')),
-    path('', include('shop.urls', namespace='shop'),),
+    path('cart/', include('ecommerce.cart.urls', namespace='cart')),
+    path('payment/', include('ecommerce.payment.urls', namespace='payment')),
+    path('orders/', include('ecommerce.orders.urls', namespace='orders')),
+    path('coupons/', include('ecommerce.coupons.urls', namespace='coupons')),
+    path('', include('ecommerce.shop.urls', namespace='shop'),),
 ]
 if settings.DEBUG:
  urlpatterns += static(settings.MEDIA_URL,

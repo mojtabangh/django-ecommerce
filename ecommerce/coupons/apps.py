@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CartConfig(AppConfig):
+class CouponsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'cart'
+    name = 'ecommerce.coupons'

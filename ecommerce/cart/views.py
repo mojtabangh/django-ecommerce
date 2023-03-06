@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import View, TemplateView
 
-from shop.models import Product
-from cart.cart import Cart
-from cart.forms import CartAddProductForm
-from coupons.forms import CouponApplyForm
+from ecommerce.shop.models import Product
+from ecommerce.cart.cart import Cart
+from .forms import CartAddProductForm
+from ecommerce.coupons.forms import CouponApplyForm
 
 class CartAddView(View):
     def post(self, request, *args, **kwargs):

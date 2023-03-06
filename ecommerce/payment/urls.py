@@ -1,5 +1,5 @@
 from django.urls import path
-from payment.views import PaymentProcessView, PaymentDoneView, PaymentCanceledView
+from .views import PaymentProcessView, PaymentDoneView, PaymentCanceledView
 
 app_name = 'payment'
 

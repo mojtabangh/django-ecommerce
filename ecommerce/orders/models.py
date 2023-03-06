@@ -3,8 +3,8 @@ from decimal import Decimal
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-from shop.models import Product
-from coupons.models import Coupon
+from ecommerce.shop.models import Product
+from ecommerce.coupons.models import Coupon
 
 # Create your models here.
 
