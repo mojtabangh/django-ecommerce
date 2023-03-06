@@ -89,11 +89,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'PORT': config('DB_PORT', cast=int),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
@@ -157,9 +154,10 @@ CART_SESSION_ID = 'cart'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Braintree settings
-BRAINTREE_MERCHANT_ID = config('MERCHANT_ID') # Merchant ID
-BRAINTREE_PUBLIC_KEY = config('PUBLIC_KEY') # Public Key
-BRAINTREE_PRIVATE_KEY = config('PRIVATE_KEY') # Private key
+# A quiuck fix. It will be replaced with another payment systen.
+BRAINTREE_MERCHANT_ID = config('MERCHANT_ID', default=1) # Merchant ID
+BRAINTREE_PUBLIC_KEY = config('PUBLIC_KEY', default='1') # Public Key
+BRAINTREE_PRIVATE_KEY = config('PRIVATE_KEY', default='1') # Private key
 
 BRAINTREE_CONF = braintree.Configuration(
     braintree.Environment.Sandbox,
