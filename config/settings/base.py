@@ -22,6 +22,7 @@ LOCAL_APPS = [
     'ecommerce.orders.apps.OrdersConfig',
     'ecommerce.payment.apps.PaymentConfig',
     'ecommerce.coupons.apps.CouponsConfig',
+    'ecommerce.common.apps.CommonConfig',
 ]
     
 THIRD_PARTY_APPS = [
@@ -66,14 +67,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart',
+                #'cart.context_processors.cart',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
 
 # Database
 DATABASES = {
@@ -82,7 +82,6 @@ DATABASES = {
         'NAME': 'mydatabase',
     }
 }
-
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -100,7 +99,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 
@@ -109,7 +107,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
