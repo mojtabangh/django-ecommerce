@@ -30,10 +30,9 @@ python manage.py runserver
 <!-- ToDo List -->
 ## Roadmap
 
-- [] Add SeoModel 
-- [] Replace braintree with  az-iranian-bank-gateways
-- [] Dockerize project
-
+- [ ] Add SeoModel 
+- [ ] Replace braintree with  az-iranian-bank-gateways
+- [ ] Dockerize project
 ## Links
 - [Linkedin](https://www.linkedin.com/in/mojtabangh/)
 - [Telegram](https://t.me/Mojtaba_Naghavi)
