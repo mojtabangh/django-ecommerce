@@ -33,6 +33,7 @@ python manage.py runserver
 - [ ] Add SeoModel 
 - [ ] Replace braintree with  az-iranian-bank-gateways
 - [ ] Dockerize project
+- [ ] Add search for products
 ## Links
 - [Linkedin](https://www.linkedin.com/in/mojtabangh/)
 - [Telegram](https://t.me/Mojtaba_Naghavi)
