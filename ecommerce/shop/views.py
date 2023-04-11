@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import View, DetailView
+from django.views.generic import (
+    View, DetailView, ListView
+)
+from django.db.models import Q
 
 from .models import Product, Category
 from ecommerce.cart.forms import CartAddProductForm
@@ -28,3 +31,14 @@ class ProductDetailView(DetailView):
         context['products'] = get_object_or_404(Product, id=self.kwargs['id'], slug=self.kwargs['slug'], available=True)
         context['cart_product_form'] = CartAddProductForm
         return context
+    
+# Search
+class SearchResultView(ListView):
+    model = Product
+    template_name = 'shop/product/search_results.html'
+    context_object_name = 'products'
+
+    def get_queryset(self):
+        query = self.request.GET('q')
+        object_list = Product.objects.filter(Q(name__search=query) | Q(description__search=query))
+        return object_list
