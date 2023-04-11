@@ -31,6 +31,7 @@ python manage.py runserver
 ## Roadmap
 
 - [ ] Add SeoModel 
+- [ ] Change template
 - [ ] Replace braintree with  az-iranian-bank-gateways
 - [ ] Dockerize project
 - [ ] Add search for products
