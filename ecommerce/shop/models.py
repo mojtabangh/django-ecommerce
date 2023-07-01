@@ -1,7 +1,8 @@
 from django.db import models
 from django.urls import reverse
 from ckeditor.fields import RichTextField
-# Create your models here.
+
+from ecommerce.common.models import BaseModel
 
 class Category(models.Model):
     name = models.CharField(max_length=255, db_index=True,)
@@ -18,7 +19,7 @@ class Category(models.Model):
     def get_absolute_url(self):
         return reverse('shop:product_list_by_category', args=[self.slug])
 
-class Product(models.Model):
+class Product(BaseModel):
     category = models.ForeignKey(Category, related_name='products',
     on_delete=models.CASCADE
     )
@@ -28,8 +29,6 @@ class Product(models.Model):
     description = RichTextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     available = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['name',]

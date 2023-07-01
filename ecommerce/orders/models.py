@@ -3,20 +3,19 @@ from decimal import Decimal
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+from ecommerce.common.models import BaseModel
 from ecommerce.shop.models import Product
 from ecommerce.coupons.models import Coupon
 
 # Create your models here.
 
-class Order(models.Model):
+class Order(BaseModel):
     first_name = models.CharField(max_length=50,)
     last_name = models.CharField(max_length=50,)
     email = models.EmailField()
     address = models.CharField(max_length=255)
     postal_code = models.CharField(max_length=20)
     city = models.CharField(max_length=100,)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
     braintree_id = models.CharField(max_length=150, blank=True)
     coupon = models.ForeignKey(
